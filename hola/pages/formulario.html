@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/formulario.css">
+
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post" id="formulario">
+        <h1>Rellenar Formulario</h1>
+
+        <label for="nombre">Nombre</label> <br>
+        <input type="text" id="nombre" name="nombre" autofocus> <br>
+
+        <label for="apellido">Apellido</label> <br>
+        <input type="text" id="apellido" name="apellido" maxlength="8"> <br>
+
+        <label for="dni">DNI</label><br>
+        <input type="number" name="dni" id="dni"><br>
+
+        <label for="edad">Edad</label><br>
+        <input type="number" name="edad" id="edad" min="0" max="100"><br>
+
+
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" minlength="8"><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" pattern="([a-zA-Z0-9]([^ @&%$\\\/()=?¿!.,:;]?|\d?)+[a-zA-Z0-9][\.]){1,4}" placeholder="pepe@gmail.com"><br>
+
+        <input type="submit" value="Enviar Datos">
+
+
+        <!-- Tambien puede estar un boton aca -->
+        <button>
+            Boton de envio de Data
+        </button>
+    </form>
+
+    <div>
+        <button>
+            <a href="..//index.html#piedepagina">Ruta relativa</a>
+        </button>
+    </div>
+
+    <div>
+        <button>
+            <a href="https://elcssar.com/html5/input-type-email-regex-pattern" target="_blank">Ruta absoluta</a>
+        </button>
+    </div>
+
+    <a href="../pages/productos.html">
+        <img src="../assents/images/d72561bb0098275761012442b46d6754.jpg" alt="Fuaaaa el Diego">
+    </a>
+</body>
+</html>

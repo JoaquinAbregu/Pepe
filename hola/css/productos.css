@@ -1,0 +1,63 @@
+/* reseteo de css */
+*{
+    margin: 0 ;
+    padding: 0 ;
+}
+
+body{color: #799096;}
+div{border: solid black;
+    /* float: left; */
+    width: 350px;
+    padding: 30px;
+    margin: 40px;
+    text-align: center;
+}
+.fuentePadre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button{
+    padding: 15px;
+    margin-top: 10px;
+}
+
+
+button a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover{
+    background: aquamarine;
+    color: white;
+}
+
+button a:hover{
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 1px blueviolet;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h3, h4{
+    margin: 15px;
+}

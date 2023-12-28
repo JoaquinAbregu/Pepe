@@ -1,0 +1,17 @@
+/* Seleccionamos el selector(slector de tag) */
+body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{color: blueviolet;
+}
+
+/* Seleccion por clases */
+.tituloVerde{color: green
+;}
+
+.tipografiaNueva{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Podemos seleccionar por id */
+#parrafoAzul{color: blue;
+}
