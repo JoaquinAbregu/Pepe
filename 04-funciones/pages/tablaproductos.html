@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-    crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -30,8 +32,38 @@
         Bienvenido a la Tabla de productos
     </h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-    crossorigin="anonymous"></script>
+    <div class="mb-3 text-center">
+        <button type="button" class="btn btn-warning w-50" id="mostrarDatos">Mostrar Producto</button>
+    </div>
+
+    <table class="table table-striped">
+        <!-- Encabezado de la tabla -->
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <!-- Los datos de la tabla -->
+        <!-- Agregamos un id para que cargue los datos del usuario -->
+        <tbody id="miTabla">
+            <tr>
+                <th scope="row">Pizza</th>
+                <td>6000</td>
+                <td>23</td>
+                <td>Miamiii</td>
+        </tbody>
+    </table>
+
+
+    <script src="../js/tablaproductos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>

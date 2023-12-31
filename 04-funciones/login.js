@@ -15,6 +15,8 @@ const login = () => {
         location.href = './formulario.html' //sirve para que si esta vacio el email o la contraseña se quede en el formulario
     }  */
     if (user == usuario && password == contraseña){
+        //Guardo el nombre de usuario del usuario
+        localStorage.setItem('Admin', JSON.stringify(usuario))
         location.href = './admin.html'
     }else{
         location.href = './error.html'
