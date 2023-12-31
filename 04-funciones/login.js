@@ -9,11 +9,11 @@ const login = () => {
     console.log(password);
 
     let usuario = 'pepe@gmail.com'
-    let contraseña = '123456789'
+    let contraseña = '123456'
 /*     if (user == ' ' || password == ' '){
         alert('Ingrese los datos solicitados')
         location.href = './formulario.html' //sirve para que si esta vacio el email o la contraseña se quede en el formulario
-    } */
+    }  */
     if (user == usuario && password == contraseña){
         location.href = './admin.html'
     }else{
