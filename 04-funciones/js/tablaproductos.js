@@ -18,7 +18,7 @@ console.log('La cantidad verdadera de producto es:' + misProductos.length);
 
 
 //Creamos una funcion con un evento
-boton.addEventListener = (e) => {
+boton.addEventListener('click', (e) => {
     e.preventDefault();
     
     //Creamos una variable para los datos de las celdas de la tabla
@@ -53,4 +53,4 @@ boton.addEventListener = (e) => {
 
     }
 
-}
+});
