@@ -1,0 +1,7 @@
+
+/* Variable para cambiar el fondo */
+.fondoFooter{
+    background: yellowgreen !important;
+    /* Para poner la letras negritas tengo que poner lo siguiente */
+    font-weight: bold;
+}
