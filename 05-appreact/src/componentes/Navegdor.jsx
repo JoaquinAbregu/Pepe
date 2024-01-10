@@ -1,6 +1,7 @@
 import '../css/navegacion.css'
 import Busqueda from './Busqueda';
-
+//Paso 6
+import {Link} from 'react-router-dom'
 
 function Navegador() {
     return (
@@ -14,10 +15,10 @@ function Navegador() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link to= '/' class="nav-link active" aria-current="page" >Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <Link to='/button' class="nav-link">Botoncito</Link>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+
 import './css/App.css';
 import React from "react";
 import Navegador from "./componentes/Navegdor.jsx"
 import Footer from './componentes/Footer/Footer.jsx';
 
+//Paso 4 de ruteo
+//Importamos los gestores de las rutas
+import { Routes, Route } from 'react-router-dom';
+import  Button  from './componentes/button.js';
+
 //JSK
-const saludar = () => {
-  alert('Hola')
-}
+
 function App() {
 
   return (
@@ -16,45 +19,18 @@ function App() {
       <>
 
       <Navegador />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
-
-          <button onClick={saludar}>
-            Saludar al cliente
-          </button>
-        </header>
-      </div>
+      
+      <h1 className='text-center mt-5 mb-5'> 
+        Bienvenido 
+      </h1>
+      
+      {/* Paso 5) */}
+      {/* Lo siguiente se le llama rutear al componente */}
+      <Routes>
+        <Route path='/button' element= {<Button /> } />
+      </Routes>
 
       <Footer />
-
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
-        </header>
-      </div>
       </>
     </React.Fragment>
     );
