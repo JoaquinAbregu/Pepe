@@ -9,9 +9,9 @@ const Formulario = () => {
 
     /* Este arrow fuction me imprime los nombres que el usuario carga */
     const imprimirDatos = () => {
-        console.log(nombre);
-        console.log(apellido);
-        console.log(provincia);
+        console.log(`Los elementos que se cargaron son: ${nombre} ${apellido} ${provincia}`);
+        //Mostramos los elementos
+        alert(`Los elementos que se han cargado son: ${nombre} ${apellido} ${provincia}`)
         /* Para que me vacie los inputs hago lo siguiente */
         setNombres('');
         setApellido('');
@@ -68,6 +68,7 @@ const Formulario = () => {
                         required 
                         />
                     </div>
+                    
 
                     <div className="mb-3 text-center">
                         <button onClick= { imprimirDatos } type="button" className="btn btn-success w-50">Login</button>
