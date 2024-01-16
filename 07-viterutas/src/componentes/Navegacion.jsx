@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cerrar from "./Cerrar";
 
 
 function Navegador() {
@@ -22,7 +23,18 @@ function Navegador() {
                             <li className="nav-item">
                                 <Link to= '/personaje' className="nav-link">Personajes</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to= '/login' className="nav-link">Login</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to= '/admin' className="nav-link">Admin</Link>
+                            </li> 
+                            <li className="nav-item">
+                                <Link to= '/usuarios' className="nav-link">Usuarios</Link>
+                            </li>
                         </ul>
+
+                        <Cerrar />  
                         
                     </div>
                 </div>

@@ -1,77 +1,78 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Formulario = () => {
+const Login = () => {
     
-    const [nombre, setNombres] = useState('');
-    const [apellido, setApellido] = useState('');
-    const [provincia, setProvincia] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    
+    const navigate = useNavigate();
+
 
     /* Este arrow fuction me imprime los nombres que el usuario carga */
-    const imprimirDatos = () => {
-        console.log(`Los elementos que se cargaron son: ${nombre} ${apellido} ${provincia}`);
-        //Mostramos los elementos
-        alert(`Los elementos que se han cargado son: ${nombre} ${apellido} ${provincia}`)
-        /* Para que me vacie los inputs hago lo siguiente */
+    const login = () => {
+        if (email == ' ' || password == ' '){
+            alert('Porfavor complete con su email y/o password correctamente');
+            limpiarDatos()
+            return;
+        }
         
+        if (email == 'pepe@gmail.com' && password == '1234'){
+            alert('Bienvenido DIVINO')
+
+
+            //Guardamos la sesion del usuario
+            window.sessionStorage.setItem('usuario', email)
+
+            navigate('/admin')
+        }else{
+            alert('Password y/o email incorrectos')
+            navigate('*')
+        }
 
         limpiarDatos()
     }
 
     const limpiarDatos = () => {
-        setNombres('');
-        setApellido('');
-        setProvincia('');
+        setEmail('');
+        setPassword('');
     }
 
     return (
         <>
             <h1 className="text-center mt-5 mb-05">
-                Formulario de carga de Usuarios
+                Formulario de login
             </h1>
             <div className="container">
                 <form id="formLogin">
                     <div className="mb-3 texr-center">
-                        <label className="form-label">Nombre</label>
+                        <label className="form-label">Email</label>
                         <input 
-                        type="text" 
+                        type="email" 
                         className="form-control" 
                         /* id="nombre" */ 
                         /* placeholder="name@example.com"  */
-                        value = { nombre }
+                        value = { email }
                         /* El onChange lo que es cuando hay un evento en el input, que tenga valor nombre, me toma todo lo que pasa en ese evento y se la pasa a una funcion, que es setNombre y setNombre setea a una variable que es nombre  */
-                        onChange= {(e) => setNombres(e.target.value)}
+                        onChange= {(e) => setEmail(e.target.value)}
                         required 
                         />
                     </div>
                     <div className="mb-3 texr-center">
-                        <label className="form-label">Apellido</label>
+                        <label className="form-label">Password</label>
                         <input 
-                        type="email" 
+                        type="password" 
                         className="form-control"  
                         /* placeholder="name@example.com" */ 
-                        value = { apellido }
+                        value = { password }
                         /* El onChange lo que es cuando hay un evento en el input, que tenga valor nombre, me toma todo lo que pasa en ese evento y se la pasa a una funcion, que es setNombre y setNombre setea a una variable que es nombre  */
-                        onChange= {(e) => setApellido(e.target.value)}
+                        onChange= {(e) => setPassword(e.target.value)}
                         required 
                         />
                     </div>                    
-                    <div className="mb-3 texr-center">
-                        <label className="form-label">Provincia</label>
-                        <input 
-                        type="email" 
-                        className="form-control"  
-                        /* placeholder="name@example.com"  */
-                        value = { provincia }
-                        /* El onChange lo que es cuando hay un evento en el input, que tenga valor nombre, me toma todo lo que pasa en ese evento y se la pasa a una funcion, que es setNombre y setNombre setea a una variable que es nombre  */
-                        onChange= {(e) => setProvincia(e.target.value)}
-                        required 
-                        />
-                    </div>
-                    
-
                     <div className="mb-3 text-center">
-                        <button onClick= { imprimirDatos } type="button" className="btn btn-success w-50">Login</button>
+                        <button onClick= { login } type="button" className="btn btn-success w-50">Login</button>
                     </div>
                     <div className="mb-3 text-center">
                         <button onClick={ limpiarDatos } className="btn btn-danger w-75">Reset</button>
@@ -90,4 +91,4 @@ const Formulario = () => {
 }
 
 
-export default Formulario;
+export default Login;
