@@ -6,7 +6,7 @@ const Formulario = () => {
     const [nombre, setNombres] = useState('');
     const [apellido, setApellido] = useState('');
     const [provincia, setProvincia] = useState('');
-
+    const [datos, setDatos] = useState([])
     /* Este arrow fuction me imprime los nombres que el usuario carga */
     const imprimirDatos = () => {
         console.log(`Los elementos que se cargaron son: ${nombre} ${apellido} ${provincia}`);
@@ -14,6 +14,26 @@ const Formulario = () => {
         alert(`Los elementos que se han cargado son: ${nombre} ${apellido} ${provincia}`)
         /* Para que me vacie los inputs hago lo siguiente */
         
+        //Primera forma para cargar los datos en el localStorage
+        //1. Creamos el objeto de tipo persona para guardar en el arreglo de dato
+        /* const persona = {
+            nombre: nombre,
+            apellido: apellido,
+            provincia: provincia,
+        } */
+        
+        //2. Cargamos el objeto de tipo persona para guardar en el arreglo de datos
+        //setDatos(persona)
+
+        //3. Gardamos el array de datos en el localstorage
+        //window.localStorage.setItem('datos', JSON.stringify(datos));
+
+
+        //Segunda forma de cargar los datis en el localStorage
+        //Cargamos el arreglo de objeto con los datos de la persona
+        setDatos([...datos, {nombre, apellido, provincia}])
+        //Cargamos el arreglo en el localStorage
+        window.localStorage.setItem('datos', JSON.stringify(datos))
 
         limpiarDatos()
     }

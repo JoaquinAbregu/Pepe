@@ -14,10 +14,10 @@ const Admin = () => {
             //Lo cargamos en el usuario
             setUsuario(usuario);
         }else{
-            alert('Usuario cerro seccion')
+            alert('Usuario NO se Logio')
             navigate('*')
         }
-    })
+    },[]);
 
     return (
         <>
